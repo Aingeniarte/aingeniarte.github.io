@@ -88,4 +88,22 @@ const builtWith = [
     </section>
     <RecentBlogPosts />
   </main>
+  <script>
+  const colores = [
+    "#ff6b6b",
+    "#ffd166",
+    "#06d6a0",
+    "#4cc9f0",
+    "#9b5de5",
+    "#f15bb5",
+  ];
+
+  const tarjetas = document.querySelectorAll("#about > div > :first-child");
+  const coloresMezclados = [...colores].sort(() => Math.random() - 0.5);
+
+  tarjetas.forEach((tarjeta, posicion) => {
+    (tarjeta as HTMLElement).style.backgroundColor =
+      coloresMezclados[posicion % coloresMezclados.length];
+  });
+</script>
 </Layout>
