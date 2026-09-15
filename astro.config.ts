@@ -5,12 +5,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   // used to generate images
   site:
-    process.env.VERCEL_ENV === 'production'
-      ? 'https://brutal.elian.codes/'
-      : process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}/`
-        : 'https://localhost:3000/',
-  trailingSlash: 'ignore',
+    'https://aingeniarte.github.io/',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
